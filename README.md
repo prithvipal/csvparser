@@ -30,3 +30,10 @@ func main() {
 	fmt.Println(data)
 }
 ```
+
+**Output**
+```
+[[id book_title price name_of_author] 
+[101 Let us C 1.2044999694824219E+02 Prithvi] 
+[102 Let us Go 4.9095001220703125E+02 Parthiv]]
+```
