@@ -17,7 +17,18 @@ type Encoder struct {
 }
 
 // Encode method writes cvs encoding
-func (e Encoder) Encode(i interface{}) {
+func (e *Encoder) Encode(i interface{}) {
 	data := Marshal(i)
 	e.w.WriteAll(data)
+}
+
+// NewDecoder returns a new decoder that reader from r.
+func NewDecoder(r io.Reader) *Decoder {
+	return &Decoder{r: csv.NewReader(r)}
+}
+
+// An Decoder reads cvs values to an input stream.
+type Decoder struct {
+	r *csv.Reader
+	//w io.Writer
 }
