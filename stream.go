@@ -18,7 +18,7 @@ type Encoder struct {
 
 // Encode method writes cvs encoding
 func (e *Encoder) Encode(i interface{}) error {
-	data := Marshal(i)
+	data := marshal(i)
 	return e.w.WriteAll(data)
 }
 

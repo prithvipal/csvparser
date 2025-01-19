@@ -62,7 +62,7 @@ func GetFieldNameTypeAndValue(i interface{}) {
 }
 
 // Marshal ...
-func Marshal(i interface{}) [][]string {
+func marshal(i interface{}) [][]string {
 	data := make([][]string, 0)
 	tagNames := getTagNames(i)
 	data = append(data, tagNames)

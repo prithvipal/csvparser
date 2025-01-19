@@ -18,7 +18,7 @@ func TestMarshal(t *testing.T) {
 	books = append(books, book1)
 	book2 := Book{ID: 102, Title: "Hands on rust programming", Price: 490.95, Author: "Parthiv"}
 	books = append(books, book2)
-	data := Marshal(books)
+	data := marshal(books)
 	actualLen := len(data)
 	wantLen := 3
 	if actualLen != wantLen {
