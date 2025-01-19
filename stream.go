@@ -17,9 +17,9 @@ type Encoder struct {
 }
 
 // Encode method writes cvs encoding
-func (e *Encoder) Encode(i interface{}) {
+func (e *Encoder) Encode(i interface{}) error {
 	data := Marshal(i)
-	e.w.WriteAll(data)
+	return e.w.WriteAll(data)
 }
 
 // NewDecoder returns a new decoder that reader from r.
